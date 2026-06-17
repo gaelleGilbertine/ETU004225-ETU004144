@@ -3,17 +3,14 @@
 namespace App\Controllers;
 
 use App\Models\AchatModel;
-use CodeIgniter\Controller;
-
-class AchatController extends Controller
+use App\Models\CaisseModel;
+class AchatController extends BaseController
 {
     
-    public function index()
-    {
-        $model = new AchatModel();
-        $data['achats'] = $model->findAll();
-
-        return $this->response->setJSON($data);
+    public function index(){
+        $caissesModel = new CaisseModel();
+        $caisses = $caissesModel->findAll();
+        return view('/achat/achat_view', ['caisses' => $caisses]);
     }
 
   
@@ -36,17 +33,17 @@ class AchatController extends Controller
     {
         $model = new AchatModel();
         $data = $this->request->getPost();
-
+        $session = session();
+      
         $model->insert([
             'idUser' => $data['idUser'],
-            'idCaisse' => $data['idCaisse'],
-            'nomClient' => $data['nomClient'],
+            // 'idCaisse' => $data['idCaisse'],
+            'idCaisse' => $data['idCaisse'] ?? null, // ou gérer autrement
             'date' => date('Y-m-d H:i:s') // ou laisser SQLite gérer
         ]);
-
-        return $this->response->setJSON([
-            'message' => 'Achat créé avec succès'
-        ]);
+        $data['idCaisse'] = $session->get('caisse_id'); // ou une autre méthode pour obtenir l'ID de l'utilisateur connecté
+        
+        return redirect()->to('/achatDetail');
     }
 
   

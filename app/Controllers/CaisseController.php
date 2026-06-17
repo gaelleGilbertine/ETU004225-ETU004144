@@ -1,6 +1,7 @@
 <?php
 namespace App\Controllers;
 use App\Models\CaisseModel;
+
 class CaisseController extends BaseController{
     protected CaisseModel $caisseModel;
     public function __construct(){
@@ -32,6 +33,5 @@ class CaisseController extends BaseController{
         $caisses = $this->caisseModel->findAll();
         return view('caisses_view', ['caisses' => $caisses]);
     }
+    
 }
-
-?>

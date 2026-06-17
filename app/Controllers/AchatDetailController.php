@@ -4,16 +4,17 @@ namespace App\Controllers;
 
 use App\Models\AchatDetailModel;
 use CodeIgniter\Controller;
-
-class AchatDetailController extends Controller
+use App\Models\ProduitModel;
+class AchatDetailController extends BaseController
 {
     
     public function index()
     {
-        $model = new AchatDetailModel();
-        $data['details'] = $model->findAll();
+        $produitModel = new ProduitModel();
+        $produits = $produitModel->findAll();
 
-        return $this->response->setJSON($data);
+
+        return view('/achat/achat_detail_view', ['produits' => $produits]);
     }
 
    
@@ -36,9 +37,9 @@ class AchatDetailController extends Controller
     {
         $model = new AchatDetailModel();
         $data = $this->request->getPost();
-
+            $session = session();
         $model->insert([
-            'idAchat' => $data['idAchat'],
+            'idAchat' => $session->get('achat_id'), // ou une autre méthode pour obtenir l'ID de l'achat en cours
             'idProduit' => $data['idProduit'],
             'quantite' => $data['quantite']
         ]);

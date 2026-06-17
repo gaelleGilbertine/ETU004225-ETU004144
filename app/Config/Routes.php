@@ -5,7 +5,7 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'Home::index');
+$routes->get('/', 'AchatController::index');
 
 // Quantite Produit routes
 $routes->get('/quantites', 'QuantiteProduitController::findAll');
@@ -61,3 +61,13 @@ $routes->post('/users/(:num)', 'UserController::delete/$1');
 
 
 
+// Achat
+$routes->get('/achats', 'AchatController::index');
+$routes->get('/achats/list', 'AchatController::findAll');
+$routes->get('/achats/(:num)', 'AchatController::find/$1');
+$routes->post('/achats/insert', 'AchatController::create');
+
+
+// Achat Detail
+$routes->get('/achatDetail', 'AchatDetailController::index');
+$routes->post('/achatDetail/insert', 'AchatDetailController::create');
