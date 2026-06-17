@@ -13,12 +13,14 @@
 -ProduitModel(C)(ok)
 -PriXpRODUT(C)(ok)
 -QuantiteProduitModel(C)(ok)
--CaisseModel(C)(ok)
+-CaisseModel(C)
 -UserModel(G)
 -AchatModel(G)
 -AchatDetalModel(G)
 # Controller 
-en fonction de model 
+-UserController(G)(ok)
+-AchatController(G)(ok)
+-AchatDetailController(G)(ok)
 # Travaux a faire 2:
 1.1. Creaton de la page d'accueil
 1.2. Insertion dans la table 
