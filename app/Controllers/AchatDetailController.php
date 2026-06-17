@@ -5,7 +5,7 @@ namespace App\Controllers;
 use App\Models\AchatDetailModel;
 use CodeIgniter\Controller;
 
-class AchatDetailController extends Controller
+class AchatDetailController extends BaseController
 {
     
     public function index()
