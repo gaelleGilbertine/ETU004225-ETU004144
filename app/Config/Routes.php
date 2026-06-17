@@ -77,8 +77,8 @@ $routes->post('/achatDetail/insert', 'AchatDetailController::create');
 
 
 // Routes REST existantes (conservées)
-$routes->get('/users',              'UserController::index');
-$routes->post('/users',             'UserController::create');
-$routes->post('/users/login',       'UserController::login');
-$routes->post('/users/logout',      'UserController::logout');
+$routes->get('/users','UserController::index');
+$routes->post('/users','UserController::create');
+$routes->post('/users/login','UserController::login');
+$routes->post('/users/logout', 'UserController::logout');
 
