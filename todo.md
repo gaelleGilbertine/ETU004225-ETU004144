@@ -5,7 +5,7 @@
 - QuantiteProduit(id, idProduit, quantite)
 - Caisse (id ,nomDeCaisse)
 - User (id, username, mdp)
-- Achat (id ,idUser, idCaisse, nomClient, date)
+- Achat (id ,idUser, idCaisse, date)
 - AchatDetail(id, idAchat, idProduit, quantite)  
 2. Intialsation codeIgniter(Christelle)(ok)
 3. Creation du template (Gaelle)(ok)
