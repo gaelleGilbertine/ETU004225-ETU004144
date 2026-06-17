@@ -3,7 +3,10 @@
 namespace App\Controllers;
 
 use App\Models\AchatModel;
+
 use App\Models\CaisseModel;
+
+
 class AchatController extends BaseController
 {
     

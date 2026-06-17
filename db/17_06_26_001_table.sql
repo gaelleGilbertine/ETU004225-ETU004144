@@ -56,3 +56,19 @@ CREATE TABLE IF NOT EXISTS AchatDetail (
     FOREIGN KEY (idAchat) REFERENCES Achat(id) ON DELETE CASCADE,
     FOREIGN KEY (idProduit) REFERENCES Produit(id)
 );
+
+INSERT INTO User (username, mdp) VALUES
+('admin', 'admin123'),
+('jean', '1234'),
+('alice', 'azerty'),
+('bob', 'bobpass');
+
+
+INSERT INTO Produit (designation) VALUES
+('Pain'),
+('Lait'),
+('Sucre'),
+('Riz'),
+('Huile'),
+('Savon');
+

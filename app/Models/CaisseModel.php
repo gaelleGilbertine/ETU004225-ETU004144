@@ -4,6 +4,5 @@ use CodeIgniter\Model;
 class CaisseModel extends Model{
     protected $table = 'Caisse';
     protected $primaryKey = 'id';
-    protected $allowedFields = ['nomCaisse'];
+    protected $allowedFields = ['nomDeCaisse'];
 }
-?>

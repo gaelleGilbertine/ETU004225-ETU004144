@@ -5,6 +5,7 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
+
 $routes->get('/', 'AchatController::index');
 
 // Quantite Produit routes
@@ -71,3 +72,13 @@ $routes->post('/achats/insert', 'AchatController::create');
 // Achat Detail
 $routes->get('/achatDetail', 'AchatDetailController::index');
 $routes->post('/achatDetail/insert', 'AchatDetailController::create');
+
+
+
+
+// Routes REST existantes (conservées)
+$routes->get('/users',              'UserController::index');
+$routes->post('/users',             'UserController::create');
+$routes->post('/users/login',       'UserController::login');
+$routes->post('/users/logout',      'UserController::logout');
+

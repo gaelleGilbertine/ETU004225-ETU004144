@@ -2,9 +2,7 @@
 namespace App\Models;
 use CodeIgniter\Model;
 class PrixProduitModel extends Model{
-    protected $table = 'Prix';
+    protected $table = 'PrixProduit';
     protected $primaryKey = 'id';
     protected $allowedFields = ['idProduit','prixUnitaire'];
 }
-
-?>
