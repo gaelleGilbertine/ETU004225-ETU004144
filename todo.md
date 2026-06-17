@@ -13,7 +13,7 @@
 -ProduitModel(C)(ok)
 -PriXpRODUT(C)(ok)
 -QuantiteProduitModel(C)(ok)
--CaisseModel(C)
+-CaisseModel(C)(ok)
 -UserModel(G)
 -AchatModel(G)
 -AchatDetalModel(G)
