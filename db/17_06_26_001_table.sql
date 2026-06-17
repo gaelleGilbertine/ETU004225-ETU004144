@@ -42,7 +42,6 @@ CREATE TABLE IF NOT EXISTS Achat (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     idUser INTEGER NOT NULL,
     idCaisse INTEGER NOT NULL,
-    nomClient TEXT,
     date TEXT NOT NULL DEFAULT (datetime('now', 'localtime')),
     FOREIGN KEY (idUser) REFERENCES User(id),
     FOREIGN KEY (idCaisse) REFERENCES Caisse(id)
