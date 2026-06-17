@@ -10,9 +10,9 @@
 2. Intialsation codeIgniter(Christelle)(ok)
 3. Creation du template (Gaelle)(ok)
 # Creation des model ::
--ProduitModel(C)
--PriXpRODUT(C)
--QuantiteProduitModel(C)
+-ProduitModel(C)(ok)
+-PriXpRODUT(C)(ok)
+-QuantiteProduitModel(C)(ok)
 -CaisseModel(C)
 -UserModel(G)
 -AchatModel(G)
